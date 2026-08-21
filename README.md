@@ -75,10 +75,10 @@ I performed reconnaissance against the networkwalks.com domain using six Kali Li
 ### 4.2 Network Scanning with Zenmap
 For the second activity (Module W2-PM5), I used Zenmap (official GUI front-end for Nmap) on my Windows PC to perform host discovery and topology mapping on my local LAN:
 * **Task 1 (Installation):** Downloaded and installed Zenmap with Npcap on Windows.
-* **Task 2 (Subnet Identification):** Executed ipconfig in Windows Command Prompt, identifying the local IP address 192.168.56.1 and LAN subnet mask 255.255.255.0.
-* **Task 3 (Live Host Discovery):** Configured Zenmap with target 192.168.56.1/24 and executed a Ping Scan (nmap -sn 192.168.56.1/24).
+* **Task 2 (Subnet Identification):** Executed ipconfig in Windows Command Prompt, identifying the local IP address 192.168.xx.1 and LAN subnet mask 255.255.255.0.
+* **Task 3 (Live Host Discovery):** Configured Zenmap with target 192.168.56.1/24 and executed a Ping Scan (nmap -sn 192.168.xx.1/24).
 * **Task 4 (Host Count):** A total of six (6) hosts were identified as live on the local subnet (including the scanning PC).
-* **Task 5 (Live IP Addresses):** The live IP addresses discovered were: 192.168.56.1, 192.168.100.82, 192.168.100.83, 192.168.100.111, 192.168.100.112, and 192.168.100.12.
+* **Task 5 (Live IP Addresses):** The live IP addresses discovered were: 192.168.56.1, 192.168.xxx.xx, 192.168.xxx.xx, 192.168.xxx.xxx, 192.168.xxx.xxx, and 192.168.xxx.xx.
 * **Task 6 (MAC Addresses & Vendors):** Submitted on networkwalks.com
 * **Task 7 (Topology Generation):** Navigated to the Zenmap Topology tab, turned on the legend, and saved the network topology graph in PDF format.
 
