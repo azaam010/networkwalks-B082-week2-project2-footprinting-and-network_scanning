@@ -98,7 +98,7 @@ Based on the technical data gathered from the footprinting and network scanning 
 | **4** | **Permissive SPF Email Configuration** | DNSRecon identified SPF record configured with soft fail (~all) | Allows unauthorized mail servers to send spoofed emails originating from @networkwalks.com with only a soft failure flag, increasing phishing delivery risks. | **● Low**<br>(CVSS: 3.1) |
 | **5** | **DNSSEC Cryptographic Signing Inactive** | WHOIS and DNSRecon confirmed DNSSEC status as 'unsigned' | Leaves DNS responses vulnerable to cache poisoning and spoofing attacks, potentially allowing malicious resolvers to redirect traffic. | **● Low**<br>(CVSS: 2.6)|
 | **6** | **Hosting IP & Server Header Disclosures** | Nslookup & cURL revealed IP 192.232.216.135 and Server: Apache | Reveals direct network location and web server software, assisting attackers in infrastructure mapping. | **● Low**<br>(CVSS: 2.5) |
-| **7** | **Internal Subnet Host & Hypervisor Visibility** | Zenmap ping sweep mapped 4 active virtual hosts with VMware OUI signatures| Internal network visibility facilitates lateral movement and reconnaissance across virtual workloads if network segmentation is absent. | **● Low**<br>(Internal) |
+| **7** | **Internal Subnet Host & Hypervisor Visibility** | Zenmap ping sweep mapped 6 active hosts with | Internal network visibility facilitates lateral movement and reconnaissance across virtual workloads if network segmentation is absent. | **● Low**<br>(Internal) |
 
 
 ---
@@ -112,7 +112,7 @@ Based on the observations from these activities, I recommend the following secur
 * **Enforce strict SPF & DMARC policies:** Transition the SPF record policy from soft fail (~all) to hard fail (-all) and publish an active DMARC record to prevent email spoofing.
 * **Enable DNSSEC signing:** Configure DNSSEC keys on authoritative nameservers and submit DS records to GoDaddy to provide cryptographic origin authentication.
 * **Maintain WAF monitoring & rule updates:** Keep ModSecurity enabled and tuned with updated OWASP Core Rule Sets (CRS) to actively block malicious payloads.
-* **Implement internal network segmentation:** Enforce VLAN isolation and private subnet access controls on internal subnets (10.0.0.0/24) to restrict unauthorized host discovery and lateral movement.
+* **Implement internal network segmentation:** Enforce VLAN isolation and private subnet access controls on internal subnets to restrict unauthorized host discovery and lateral movement.
 
 ---
 
